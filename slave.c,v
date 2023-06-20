@@ -1,0 +1,1783 @@
+head	1.37;
+access;
+symbols;
+locks
+	o2-yi:1.37; strict;
+comment	@ * @;
+
+
+1.37
+date	2016.10.25.03.15.59;	author o2-yi;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2016.10.25.02.50.11;	author o2-yi;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2016.10.25.02.21.44;	author o2-yi;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2016.10.24.22.03.19;	author o2-yi;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2016.10.24.10.11.44;	author o2-yi;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2016.10.22.09.30.47;	author o2-yi;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2016.10.20.04.22.41;	author o2-yi;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2016.10.19.23.09.41;	author o2-yi;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2016.10.19.22.19.54;	author o2-yi;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2016.10.19.22.10.18;	author o2-yi;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2016.10.10.22.32.50;	author o2-yi;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2016.10.09.00.10.11;	author o2-yi;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2016.10.08.22.37.48;	author o2-yi;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2016.10.08.22.34.30;	author o2-yi;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2016.10.08.22.33.18;	author o2-yi;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2016.10.08.08.05.10;	author o2-yi;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2016.10.08.07.22.07;	author o2-yi;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2016.10.08.00.34.27;	author o2-yi;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2016.10.07.08.34.50;	author o2-yi;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2016.10.07.08.25.47;	author o2-yi;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2016.10.06.09.11.50;	author o2-yi;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2016.10.06.08.12.37;	author o2-yi;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2016.10.06.07.47.54;	author o2-yi;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2016.10.05.09.06.35;	author o2-yi;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.10.05.09.04.34;	author o2-yi;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.10.05.09.01.22;	author o2-yi;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.10.05.08.47.25;	author o2-yi;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.10.05.08.34.31;	author o2-yi;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.10.05.05.19.12;	author o2-yi;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.10.05.05.07.51;	author o2-yi;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.10.05.04.57.20;	author o2-yi;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.10.04.13.00.44;	author o2-yi;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.10.04.01.48.57;	author o2-yi;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.10.04.01.36.07;	author o2-yi;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.10.03.22.15.19;	author o2-yi;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.10.03.07.14.58;	author o2-yi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.10.03.07.10.14;	author o2-yi;	state Exp;
+branches;
+next	;
+
+
+desc
+@copied from main.c
+@
+
+
+1.37
+log
+@*** empty log message ***
+@
+text
+@#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <getopt.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <time.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <sys/sem.h>
+#include "log.h"
+#include "pcb.h"
+
+//global var
+int shmid;
+int turn_id;
+int semid;
+char *fname = "test.out";
+int proc_num;
+
+//prototype for signal handler
+void sig_handler(int signo);
+void kill_shm();
+void kill_sem();
+void semlock();
+void semunlock();
+
+int 
+main(int argc, char *argv[]){
+	fflush(stdout);
+	//init var
+	int c, iflag, lflag, err_flag;
+	//char *fname = "test.out";	//for -l switch, default is logfile.txt
+	char str[256];			//for strtol
+	char *strbuff = "3";		//handling default value for -n
+	
+	char *endptr;			//for strtol
+	long value;			//for strtol
+
+	int pid = getpid();		//for pid
+	int sig_num;			//for signal
+
+	int k;				//loop
+	int i = atoi(argv[1]);		//will store process #
+	int max_writing;		//max writes
+	int *num;
+
+	int l_sec;			//last access - sec
+	int l_nsec;			//last access - nano sec
+	int i_sec;			//initial access -sec
+	int i_nsec;			//initial access -nano
+	int remain_t;			//remaining job
+
+	int option_index = 0;
+	opterr = 0;
+	iflag = 0;
+	lflag = 0;
+	err_flag = 0;
+
+	proc_num = i;
+
+	//time info
+	time_t rawtime;
+	struct tm * timeinfo;
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+
+	//get nano second
+	struct timespec tps, tpe;
+
+	//seed random
+	srand(time(NULL) ^ (getpid()<<16) );
+
+	//int shmid;
+	osc *o;
+	pcb *p;
+
+	signal(SIGINT, sig_handler);	//handling signal
+
+        //using atoi b/c process always pass the right type. free to use atoi w/o additional checking
+        max_writing = atoi(argv[3]);
+        fname = (char *)malloc(strlen(argv[5])+1);
+        strcpy(fname,argv[5]);
+
+	snprintf(str,sizeof(str),"process %d : exec success, now start the process");
+	create_log(str);
+	memset(str,0,sizeof(str));
+	savelog(fname);        
+
+	//create a shared memory
+	if ((shmid = shmget((key_t)12348888, sizeof(int), 0600)) == -1)
+		{
+			perror("process : fail to get a shared memory\n");
+			snprintf(str,sizeof(str),"process %d : fail to get a shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			return 1;
+		}
+	else
+		{
+			snprintf(str,sizeof(str),"process %d : got a shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			savelog(fname);
+			clearlog();
+			memset(str,0,sizeof(str));
+		}
+
+	if ((turn_id = shmget((key_t)88881234, sizeof(int)*20, 0600)) == -1)
+		{
+			perror("process : fail to get a shared memory for the peterson algorithm\n");
+			snprintf(str,sizeof(str),"process %d : fail to get a shared memory for the peterson algorithm\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			return 1;
+		}
+	else
+		{
+			snprintf(str,sizeof(str),"process%d : get a second shared memory\n", proc_num);
+			fflush(stdout);
+			create_log(str);
+			savelog(fname);
+			memset(str,0,sizeof(str));
+			clearlog();
+
+		}
+
+	//attatching shared memory
+	//first shm for data
+	if ((o = (osc *)shmat (shmid, NULL, 0)) == -1)
+		{
+			perror("process : fail to attatch the shared memory\n");
+			snprintf(str,sizeof(str),"process %d : fail to attatch the shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			return 1;
+		}
+	else
+		{
+			snprintf(str,sizeof(str),"process %d : success to attatch the shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			savelog(fname);
+			memset(str,0,sizeof(str));
+			clearlog();
+		}
+
+	//second for the algorithm
+	if ((p = (pcb *)shmat(turn_id,NULL,0)) == -1)
+		{
+			perror("process : fail to attatch the second shared memory\n");
+			snprintf(str,sizeof(str),"process %d : fail to attatch the second shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			return 1;
+		}
+	else
+		{
+			snprintf(str,sizeof(str),"process %d : success to attatch the second shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			savelog(fname);
+			memset(str,0,sizeof(str));
+			clearlog();
+		}
+
+	//semaphore
+	if((semid = semget((key_t)11114444,1, 0600)) == -1)
+		{
+			snprintf(str,sizeof(str),"process %d : fail to create semaphore\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			savelog(fname);
+			memset(str,0,sizeof(str));
+			clearlog();
+			return 1;
+		}
+	else
+		{
+			snprintf(str,sizeof(str),"process %d : got the semaphore\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			savelog(fname);
+			memset(str,0,sizeof(str));
+			clearlog();
+		}
+
+	//initialize remainder
+	remain_t = rand()%100000+1;
+
+	//in cs, initialize start time
+	semlock();
+	clock_gettime(CLOCK_REALTIME, &tps);
+	l_sec = o->sec;
+	l_nsec = o->nsec;
+	fprintf(stderr,"process %d (pid : %d) : \n job length = %d \t start time = %d:%d\n\n",i,getpid(),remain_t,l_sec,l_nsec);
+	snprintf(str,sizeof(str),"process %d (pid : %d) : \n job length = %d \t start time = %d:%d",i,getpid(),remain_t,l_sec,l_nsec);
+	create_log(str);
+	savelog(fname);
+	clearlog();
+	memset(str,0,sizeof(str));
+	semunlock();
+
+	while(1)
+		{
+			semlock();
+			//critical section
+			i_sec = l_sec;
+			i_nsec = l_nsec;
+
+			l_sec = o->sec;
+			l_nsec = o->nsec;
+
+			int tmp = (l_sec - i_sec)*100000000 + (l_nsec - i_sec);
+			if((remain_t - tmp) <= 0)
+				{
+					clock_gettime(CLOCK_REALTIME, &tpe);
+					snprintf(str,sizeof(str),"process number %d (pid:%d) is going to terminate because it reached oss clock = %d:%d\n\t\t took %d sec, %d nano sec in real time \n\n",i,getpid(),l_sec,l_nsec,tpe.tv_sec-tps.tv_sec,tpe.tv_nsec-tps.tv_nsec);
+					//snprintf(str,sizeof(str),"process number %d (pid:%d) is going to terminate because it reached oss clock = %d: %d\n\n",i,getpid(),l_sec,l_nsec);
+					memset(o->st,0,sizeof(o->st));
+					strcpy(o->st,str);
+					o->rflag = 1;
+					fflush(stdout);
+					create_log(str);
+					savelog(fname);
+					clearlog();
+					semunlock();
+					break;
+				}
+			else
+				{
+					snprintf(str,sizeof(str),"process number %d (pid:%d) reads oss clock = %d:%d\n\n",i,getpid(),l_sec,l_nsec);
+					memset(o->st,0,sizeof(o->st));
+					strcpy(o->st,str);
+					o->rflag = 1;
+					//fprintf(stderr,"%s",o->st);
+					fflush(stdout);
+					create_log(str);
+					memset(str,0,sizeof(str));
+					savelog(fname);
+					clearlog();
+
+					remain_t -=tmp;			//recalculate remaining job
+					//sleep(rand()%2+1);
+					semunlock();
+					//critical section end
+					//remainder
+				}
+		}
+
+	//terminating, record the result to pcb
+	semlock();
+	snprintf(str,sizeof(str),"process number %d terminate with osc = %d:%d\n\n",i,l_sec,l_nsec);
+	memset(str,0,sizeof(str));
+	//strcpy(o->st,str);
+	//o->rflag = 1;
+	fflush(stdout);
+	create_log(str);
+	memset(str,0,sizeof(str));
+	savelog(fname);
+	clearlog();
+
+	p->flag[i] = 0;
+	p->sec[i] = l_sec;
+	p->nsec[i] = l_nsec;
+	p->num_proc--;
+	semunlock();
+
+	if(shmdt(o) == -1)
+		{
+			perror("process : shmdt failed\n");
+			snprintf(str,sizeof(str),"process %d : shmdt failed\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			return 1;
+		}
+	else
+		{
+			snprintf(str,sizeof(str),"process %d : shmdt success\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+		}
+
+	savelog(fname);
+	fprintf(stderr,"process %d (pid:%d) is terminated successfully\n\n",proc_num,getpid());
+	return 0;
+}
+
+//signal handler
+void 
+sig_handler(int signo)
+{
+	char str[256];
+	fprintf(stderr,"process : receive a signal,terminating\n",proc_num);
+	snprintf(str,sizeof(str),"process %d : receive a signal, terminating\n",proc_num);
+	fflush(stdout);
+	create_log(str);
+	memset(str,0,sizeof(str));
+	kill_shm();
+	kill_sem();
+	savelog(fname);
+	sleep(1);
+	exit (1);
+}
+
+//function for killing a shared memory
+void 
+kill_shm()
+{
+	char str[256];
+	if((shmctl(shmid, IPC_RMID, 0)) == -1)
+		{
+			fprintf(stderr,"process %d : fail to kill the shared memory\n",proc_num);
+			snprintf(str,sizeof(str),"process %d : fail to kill the shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+		}
+	else
+		{
+			fprintf(stderr,"process %d: success to kill the shared memory\n",proc_num);
+			snprintf(str,sizeof(str),"process %d : success to kill the shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+		}
+	if((shmctl(turn_id, IPC_RMID, 0)) == -1)
+		{
+			fprintf(stderr,"process %d: fail to kill the second shared memory\n",proc_num);
+			snprintf(str,sizeof(str),"process %d : fail to kill the second shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+		}
+	else
+		{
+			fprintf(stderr,"process %d: success to kill the second shared memory\n",proc_num);
+			snprintf(str,sizeof(str),"process %d : success to kill second shared memory\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+		}
+}
+
+void
+semlock()
+{
+	char str[256];
+	struct sembuf semo;
+	semo.sem_num = 0;
+	semo.sem_op = 1;
+	semo.sem_flg = 0;
+	if((semop(semid, &semo, 1)) == -1)
+		{
+			fprintf(stderr,"process %d : fail to lock semaphore\n",proc_num);
+			snprintf(str,sizeof(str),"process %d : fail to lock semaphore\n",proc_num);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+			exit(1);
+		}
+	else
+		{
+                        snprintf(str,sizeof(str),"process %d : success to lock\n",proc_num);
+                        fflush(stdout);
+                        create_log(str);
+                        memset(str,0,sizeof(str));
+                        savelog(fname);
+                        clearlog();
+
+		}
+}
+
+void
+semunlock()
+{
+	char str[256];
+	struct sembuf semo;
+	semo.sem_num = 0;
+	semo.sem_op = -1;
+	semo.sem_flg = 0;
+	if((semop(semid,&semo, 1)) == -1)
+		{
+			fprintf(stderr,"process %d : fail to unlock semaphore\n",proc_num);
+                        snprintf(str,sizeof(str),"process %d : fail to unlock seamphore",proc_num);
+                        fflush(stdout);
+                        create_log(str);
+                        memset(str,0,sizeof(str));
+                        savelog(fname);
+                        clearlog();
+			exit(1);
+		}
+	else
+		{
+                        snprintf(str,sizeof(str),"process %d : success to unlock semaphore\n",proc_num);
+                        fflush(stdout);
+                        create_log(str);
+                        memset(str,0,sizeof(str));
+                        savelog(fname);
+                        clearlog();
+		}
+}
+
+void
+kill_sem()
+{
+	char str[256];
+	if((semctl(semid, 0, IPC_RMID)) == -1)
+                {
+			fprintf(stderr,"process %d : fail to kill semaphore\n",proc_num);
+                        snprintf(str,sizeof(str),"process %d : fail to kill semaphore\n",proc_num);
+                        fflush(stdout);
+                        create_log(str);
+                        memset(str,0,sizeof(str));
+                        savelog(fname);
+                        clearlog();
+                }
+        else
+                {
+                        snprintf(str,sizeof(str),"process %d : success to kill semaphore\n",proc_num);
+                        fflush(stdout);
+                        create_log(str);
+                        memset(str,0,sizeof(str));
+                        savelog(fname);
+                        clearlog();
+
+                }
+}
+@
+
+
+1.36
+log
+@adding real time
+@
+text
+@d229 1
+@
+
+
+1.35
+log
+@*** empty log message ***
+@
+text
+@d70 3
+d200 2
+d203 1
+d206 2
+a207 2
+	fprintf(stderr,"process %d : \n job length = %d \t start time = %d:%d\n\n",i,remain_t,l_sec,l_nsec);
+	snprintf(str,sizeof(str),"process %d : \n job length = %d \t start time = %d:%d",i,remain_t,l_sec,l_nsec);
+d227 2
+a228 1
+					snprintf(str,sizeof(str),"process number %d terminated with osc = %d:%d \n",i,l_sec,l_nsec);
+d241 1
+a241 1
+					snprintf(str,sizeof(str),"process number %d read os clock with osc = %d:%d\n",i,l_sec,l_nsec);
+d262 4
+a265 4
+	snprintf(str,sizeof(str),"process number %d terminate with osc = %d:%d\n",i,l_sec,l_nsec);
+	memset(o->st,0,sizeof(o->st));
+	strcpy(o->st,str);
+	o->rflag = 1;
+d299 1
+a299 1
+	fprintf(stderr,"process %d : terminated\n",proc_num);
+@
+
+
+1.34
+log
+@*** empty log message ***
+@
+text
+@d196 1
+a196 1
+	remain_t = rand()%10000+1;
+@
+
+
+1.33
+log
+@*** empty log message ***
+@
+text
+@d83 5
+a87 1
+        
+d152 1
+d200 6
+a205 1
+	fprintf(stderr,"process %d : \n job length = %d \t start time = %d:%d\n",i,remain_t,l_sec,l_nsec);
+d221 1
+a221 1
+					snprintf(str,sizeof(str),"process number %d terminated at my time %d:%d \n",i,l_sec,l_nsec);
+@
+
+
+1.32
+log
+@worked for additional spawning
+@
+text
+@d49 5
+a53 2
+	int l_sec;
+	int l_nsec;
+d71 1
+a71 1
+	srand((unsigned) time(&rawtime));
+d190 9
+a198 2
+	//bakery
+	for (k = 0; k <max_writing; k++)
+d202 3
+a204 1
+			//fprintf(stderr,"process number %d read os clock at time %s with osc = %d:%d\n",i,asctime(timeinfo),o->sec,o->nsec);
+d207 34
+a240 14
+			snprintf(str,sizeof(str),"process number %d read os clock with osc = %d:%d\n",i,l_sec,l_nsec);
+			memset(o->st,0,sizeof(o->st));
+			strcpy(o->st,str);
+			o->rflag = 1;
+			//fprintf(stderr,"%s",o->st);
+			fflush(stdout);
+			create_log(str);
+			memset(str,0,sizeof(str));
+			savelog(fname);
+			clearlog();
+			sleep(rand()%2+1);
+			semunlock();
+			//critical section end
+			//remainder
+d282 1
+@
+
+
+1.31
+log
+@now it can pass string to main
+and fixed sleeptime
+@
+text
+@d49 3
+d193 3
+a195 1
+			snprintf(str,sizeof(str),"process number %d read os clock with osc = %d:%d\n",i,o->sec,o->nsec);
+d210 19
+@
+
+
+1.30
+log
+@now it will read , not write to the shm
+@
+text
+@d189 1
+a189 1
+			fprintf(stderr,"process number %d read os clock at time %s with osc = %d:%d\n",i,asctime(timeinfo),o->sec,o->nsec);
+d191 4
+a194 1
+
+d200 1
+a200 1
+			sleep(rand()%3);
+@
+
+
+1.29
+log
+@*** empty log message ***
+@
+text
+@d68 1
+a68 1
+	int *shmptr;
+d123 1
+a123 1
+	if ((shmptr = shmat (shmid, NULL, 0)) == -1)
+a183 3
+	//num will handle shm
+	num = (int *)shmptr;
+
+a186 15
+			/*
+			int j;
+			do
+				{
+					p->flag[i] = want_in;
+					j = p->turn;
+					while(j !=i)
+						j=(p->flag[j] != idle)?p->turn : (j+1)%p->num_proc;
+					p->flag[i] = in_cs;
+					for(j = 0; j<p->num_proc;j++)
+						if((j!=i) && (p->flag[j] == in_cs))
+							break;
+				}while((j<p->num_proc)||(p->turn != i && p->flag[p->turn] != idle));
+			p->turn = i;
+			*/
+d189 2
+a190 4
+			sleep(rand()%3);
+			*num=*num+1;
+			fprintf(stderr,"File modified by process number %d at time %s with sharedNum = %d\n",i,asctime(timeinfo),*num);
+			snprintf(str,sizeof(str),"File modified by process number %d,  with sharedNum = %d",i,*num);
+a191 2
+			//fprintf(stderr,"shared memory modified by %d th process, %d th modification, at time %s",i,*num,asctime(timeinfo));
+			//snprintf(str,sizeof(str), "process : shared memory modifed by %dth process, %dth modification", i,*num);
+a199 5
+			/*j = (p->turn +1) % p->num_proc;
+			while (p->flag[j] == idle)
+				j = (j+1) %p->num_proc;
+			p->turn = j;
+			p->flag[i] = idle;*/
+d202 1
+a202 1
+	if(shmdt(shmptr) == -1)
+@
+
+
+1.28
+log
+@implementing semaphore
+@
+text
+@a337 1
+			fprintf(stderr,"process %d: success to lock semaphore\n",proc_num);
+a368 1
+			fprintf(stderr,"process %d: success to unlock seamphore\n",proc_num);
+a393 1
+			fprintf(stderr, "process %d : success to kill semaphore\n");
+@
+
+
+1.27
+log
+@fixing log
+@
+text
+@d11 1
+d18 1
+d25 3
+d73 1
+a73 1
+        //using atoi b/c master always pass the right type. free to use atoi w/o additional checking
+d82 2
+a83 2
+			perror("slave : fail to get a shared memory\n");
+			snprintf(str,sizeof(str),"slave %d : fail to get a shared memory\n",proc_num);
+d92 1
+a92 1
+			snprintf(str,sizeof(str),"slave %d : got a shared memory\n",proc_num);
+d102 2
+a103 2
+			perror("slave : fail to get a shared memory for the peterson algorithm\n");
+			snprintf(str,sizeof(str),"slave %d : fail to get a shared memory for the peterson algorithm\n",proc_num);
+d112 1
+a112 1
+			snprintf(str,sizeof(str),"slave%d : get a second shared memory\n", proc_num);
+d125 2
+a126 2
+			perror("slave : fail to attatch the shared memory\n");
+			snprintf(str,sizeof(str),"slave %d : fail to attatch the shared memory\n",proc_num);
+d135 1
+a135 1
+			snprintf(str,sizeof(str),"slave %d : success to attatch the shared memory\n",proc_num);
+d145 2
+a146 2
+			perror("slave : fail to attatch the second shared memory\n");
+			snprintf(str,sizeof(str),"slave %d : fail to attatch the second shared memory\n",proc_num);
+d155 22
+a176 1
+			snprintf(str,sizeof(str),"slave %d : success to attatch the second shared memory\n",proc_num);
+d190 1
+d204 2
+a205 1
+
+d213 1
+a213 1
+			//snprintf(str,sizeof(str), "slave : shared memory modifed by %dth process, %dth modification", i,*num);
+d220 1
+d222 1
+a222 1
+			j = (p->turn +1) % p->num_proc;
+d226 1
+a226 1
+			p->flag[i] = idle;
+d231 2
+a232 2
+			perror("slave : shmdt failed\n");
+			snprintf(str,sizeof(str),"slave %d : shmdt failed\n",proc_num);
+d241 1
+a241 1
+			snprintf(str,sizeof(str),"slave %d : shmdt success\n",proc_num);
+d258 2
+a259 2
+	fprintf(stderr,"slave : receive a signal,terminating\n",proc_num);
+	snprintf(str,sizeof(str),"slave %d : receive a signal, terminating\n",proc_num);
+d264 1
+d277 2
+a278 2
+			perror("slave : fail to kill the shared memory\n");
+			snprintf(str,sizeof(str),"slave %d : fail to kill the shared memory\n",proc_num);
+d287 2
+a288 2
+			fprintf(stderr,"slave %d: success to kill the shared memory\n",proc_num);
+			snprintf(str,sizeof(str),"slave %d : success to kill the shared memory\n",proc_num);
+d297 2
+a298 2
+			perror("slave : fail to kill the second shared memory\n");
+			snprintf(str,sizeof(str),"slave %d : fail to kill the second shared memory\n",proc_num);
+d307 22
+a328 2
+			fprintf(stderr,"slave %d: success to kill the second shared memory\n",proc_num);
+			snprintf(str,sizeof(str),"slave %d : success to kill second shared memory\n",proc_num);
+d334 1
+d336 69
+@
+
+
+1.26
+log
+@now working w/ peterson's multiple proc algo
+@
+text
+@d67 6
+a72 1
+	create_log("slave : exec success");
+d77 2
+a78 2
+			perror("slave : hi! fail to create a shared memory\n");
+			snprintf(str,sizeof(str),"slave %d : fail to create a shared memory\n",proc_num);
+d87 1
+a87 1
+			snprintf(str,sizeof(str),"slave %d : create a shared memory\n",proc_num);
+d90 2
+d97 2
+a98 2
+			perror("slave : fail to create a shared memory for the peterson algorithm\n");
+			snprintf(str,sizeof(str),"slave %d : fail to create a shared memory for the peterson algorithm\n",proc_num);
+d107 1
+a107 1
+			snprintf(str,sizeof(str),"slave%d : created a second shared memory\n", proc_num);
+d110 1
+d112 1
+d130 1
+a130 1
+			snprintf(str,sizeof(str),"slave %d : fuccess to attatch the shared memory\n",proc_num);
+d133 1
+d135 1
+d153 1
+d155 1
+a157 5
+	//using atoi b/c master always pass the right type. free to use atoi w/o additional checking
+	max_writing = atoi(argv[3]);
+	fname = (char *)malloc(strlen(argv[5])+1);
+	strcpy(fname,argv[5]);
+
+d181 2
+a182 2
+			fprintf(stderr,"Filemodified by process number %d at time %s with sharedNum = %d\n",i,asctime(timeinfo),*num);
+			snprintf(str,sizeof(str),"Filemodified by process number %d,  with sharedNum = %d",i,*num);
+d190 1
+d216 2
+d252 2
+d262 2
+d272 2
+d282 2
+@
+
+
+1.25
+log
+@*** empty log message ***
+@
+text
+@a144 30
+	/*
+	while(( c = getopt(argc,argv,":i:l:")) != -1)
+		switch (c)
+			{
+				case 'i':
+					iflag = 1;
+					max_w = strtol(optarg,&endptr, 10);
+					if(*endptr != '\0')
+						{
+							printf("slave : you must type digits after -i, not %s",stderr);
+							return 1;
+						}
+					break;
+				case 'l':
+					lflag = 1;
+					if(strncmp(optarg,"-",1)== 0)
+						{
+							perror("slave : you must type file name after -l switch\n");
+							return 1;
+						}
+					fname = (char*) malloc(strlen(optarg) + 1);
+					strcpy(fname,optarg);
+					break;
+				case '?':
+					err_flag = 1;
+					printf("Unknown option : -%c is found\n", optopt);
+					break;
+			}
+	*/
+
+a155 20
+			p->choosing[i] = true;
+			p->number[i] = 1 + max((((((((((((((((((p->number[0],p->number[1]),
+			p->number[2]),
+			p->number[3]),
+			p->number[4]),
+			p->number[5]),
+			p->number[6]),
+			p->number[7]),
+			p->number[8]),
+			p->number[9]),
+			p->number[10]),
+			p->number[11]),
+			p->number[12]),
+			p->number[13]),
+			p->number[14]),
+			p->number[15]),
+			p->number[16]),
+			p->number[17]),
+			p->number[18]);
+			p->choosing[i] = false;
+d157 1
+a157 1
+			for (j = 0; j<MAXP; j++)
+d159 11
+a169 3
+					while(p->choosing[j]);
+					while((p->number[j]) && (p->number[j],j)<(p->number[i],i));
+				}
+d184 5
+a188 1
+			p->number[i] = 0;
+@
+
+
+1.24
+log
+@*** empty log message ***
+@
+text
+@d215 2
+a216 2
+			fprintf(stderr,"Filemodified by process number %d at time %s with sharedNum = %d\n",i,*num,asctime(timeinfo));
+			snprintf(str,sizeof(str),"Filemodified by process number %d at time %s with sharedNum = %d",i,*num,asctime(timeinfo));
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d216 1
+a216 1
+			snprintf(str,sizeof(str),"Filemodified by process number %d at time %s with sharedNum = %d");
+@
+
+
+1.22
+log
+@fixed shared memory
+@
+text
+@d215 5
+a219 2
+			fprintf(stderr,"shared memory modified by %d th process, %d th modification, at time %s",i,*num,asctime(timeinfo));
+			snprintf(str,sizeof(str), "slave : shared memory modifed by %dth process, %dth modification", i,*num);
+@
+
+
+1.21
+log
+@fixed some problem inside code
+@
+text
+@a13 1
+
+d42 1
+a42 1
+	int num;
+d181 1
+a181 1
+	num = *shmptr;
+d214 3
+a216 3
+			num++;
+			fprintf(stderr,"shared memory modified by %d th process, %d th modification, at time %s",i, num,asctime(timeinfo));
+			snprintf(str,sizeof(str), "slave : shared memory modifed by %dth process, %dth modification", i, num);
+@
+
+
+1.20
+log
+@convert all printf to fprintf w/ stderr
+@
+text
+@d27 1
+a27 1
+
+a67 1
+
+d75 1
+d84 1
+d93 1
+d102 1
+d107 1
+a107 1
+	
+d114 1
+d123 1
+d132 1
+d141 1
+d178 1
+d218 1
+d231 1
+d240 1
+d256 1
+d274 1
+d282 1
+d290 1
+d298 1
+@
+
+
+1.19
+log
+@fixing some errors
+@
+text
+@d72 1
+a72 1
+	if ((shmid = shmget((key_t)1234, sizeof(int), 0600)) == -1)
+d88 1
+a88 1
+	if ((turn_id = shmget((key_t)8888, sizeof(int)*20, 0600)) == -1)
+d208 1
+a208 1
+			printf("shared memory modified by %d th process, %d th modification, at time %s",i, num,asctime(timeinfo));
+d243 1
+a243 1
+	printf("slave : receive a signal,terminating\n");
+d267 1
+a267 1
+			printf("slave : success to kill the shared memory\n");
+d281 1
+a281 1
+			printf("slave : success to kill the second shared memory\n");
+@
+
+
+1.18
+log
+@now it will write its process number to the logfile
+@
+text
+@d75 1
+a75 1
+			sprintf(str,sizeof(str),"slave %d : fail to create a shared memory\n",proc_num);
+d83 1
+a83 1
+			sprintf(str,sizeof(str),"slave %d : create a shared memory\n",proc_num);
+d91 1
+a91 1
+			sprintf(str,sizeof(str),"slave %d : fail to create a shared memory for the peterson algorithm\n",proc_num);
+d99 1
+a99 1
+			sprintf(str,sizeof(str),"slave%d : created a second shared memory\n", proc_num);
+d110 1
+a110 1
+			sprintf(str,sizeof(str),"slave %d : fail to attatch the shared memory\n",proc_num);
+d118 1
+a118 1
+			sprintf(str,sizeof(str),"slave %d : fuccess to attatch the shared memory\n",proc_num);
+d126 1
+a126 1
+			sprintf(str,sizeof(str),"slave %d : fail to attatch the second shared memory\n",proc_num);
+d134 1
+a134 1
+			sprintf(str,sizeof(str),"slave %d : success to attatch the second shared memory\n",proc_num);
+d221 1
+a221 1
+			sprintf(str,sizeof(str),"slave %d : shmdt failed\n",proc_num);
+d229 1
+a229 1
+			sprintf(str,sizeof(str),"slave %d : shmdt success\n",proc_num);
+d242 1
+d244 1
+a244 1
+	sprintf(str,sizeof(str),"slave %d : receive a signal, terminating\n",proc_num);
+d257 1
+d261 1
+a261 1
+			sprintf(str,sizeof(str),"slave %d : fail to kill the shared memory\n",proc_num);
+d268 1
+a268 1
+			sprintf(str,sizeof(str),"slave %d : success to kill the shared memory\n",proc_num);
+d275 1
+a275 1
+			sprintf(str,sizeof(str),"slave %d : fail to kill the second shared memory\n",proc_num);
+d282 1
+a282 1
+			sprintf(str,sizeof(str),"slave %d : success to kill second shared memory\n",proc_num);
+@
+
+
+1.17
+log
+@*** empty log message ***
+@
+text
+@d19 1
+d41 1
+a41 1
+	int i;				//will store process #
+d51 2
+d75 3
+a77 1
+			create_log("slave : hi! fail to create a shared memory\n");
+d83 3
+a85 1
+			create_log("slave : created a shared memory");
+d91 3
+a93 1
+			create_log("slave : fail to create a shared memory for the peterson algorithm\n");
+d99 4
+a102 1
+			create_log("slave : created a second shared memory");
+d110 3
+a112 1
+			create_log("slave : fail to attatch the shared memory");
+d118 3
+a120 1
+			create_log("slave : success to attatch the shared memory");
+d126 3
+a128 1
+			create_log("slave : fail to attatch the second shared memory");
+d134 3
+a136 1
+			create_log("slave : success to attatch the second shared memory");
+a169 1
+	i = atoi(argv[1]);
+d221 3
+a223 1
+			create_log("slave : shmdt failed\n");
+d228 5
+a232 1
+		create_log("slave : shmdt success");
+d242 4
+a245 2
+	printf("slave : receive a signal to terminate");
+	create_log("slave : receive a signal to terminate");
+d259 3
+a261 1
+			create_log("slave : fail to kill the shared memory");
+d266 3
+a268 1
+			create_log("slave : success to kill the shared memory");
+d273 3
+a275 1
+			create_log("slave : fail to kill the second shared memory");
+d280 3
+a282 1
+			create_log("slave : success to kill the second shared memory");
+@
+
+
+1.16
+log
+@*** empty log message ***
+@
+text
+@d152 1
+@
+
+
+1.15
+log
+@fixing some stuffs
+like process number, and loop for maximum writing for each proc
+@
+text
+@d39 3
+a41 2
+	int i;
+	int max_writing;			//max writes
+d148 2
+a149 9
+	//searching its position for i, which will be used for the algorithm
+	int k;
+	/*for (k = 0; k<MAXP;k++)
+		{
+			if(p->pid[k] == pid)
+				i = k;
+		}
+	*/
+	printf("hi\n");
+d152 2
+a153 5
+	printf("i is %d\n",i);
+	printf("argv[1] is %s\n",argv[1]);
+	printf("argv[3] is %s\n",argv[3]);
+	printf("argv: %s %s %s %s %s\n",argv[0],argv[1],argv[2],argv[3],argv[4]);
+	printf("max_w is %d\n", max_writing);
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@d40 1
+a40 1
+	long max_w;			//max writes
+d119 1
+a119 1
+	while(( c = getopt(argc,argv,"i:l:")) != -1)
+d149 1
+a149 1
+	for (k = 0; k<MAXP;k++)
+d154 9
+a162 1
+	
+d166 1
+a166 1
+	for (k = 0; k <max_w; k++)
+@
+
+
+1.13
+log
+@*** empty log message ***
+@
+text
+@d190 1
+a190 1
+			snprintf(str,sizeof(str), "slave : shared memory modifed by %dth process, %dth modification");
+@
+
+
+1.12
+log
+@*** empty log message ***
+@
+text
+@d189 2
+a190 2
+			printf("shared memory modified by %d th process, %d th modification, at time %s with %d th process\n",i, num,asctime(timeinfo));
+			snprintf(str,sizeof(str), "shared memory modifed by %dth process, %dth modification");
+@
+
+
+1.11
+log
+@*** empty log message ***
+@
+text
+@d30 1
+a30 1
+	char *e;			//for strtol
+d32 1
+a32 1
+
+d189 4
+a192 2
+			printf("File modified by process number %d at time %s with %d th process", num,asctime(timeinfo),i);
+			create_log("slave : modified shared memory");
+@
+
+
+1.10
+log
+@*** empty log message ***
+@
+text
+@d65 2
+a186 1
+			/*
+a192 1
+			*/
+d207 1
+@
+
+
+1.9
+log
+@fixing err
+@
+text
+@d26 1
+d66 1
+a66 1
+	if ((shmid = shmget((key_t)1234, sizeof(char)*1024, 0600)) == -1)
+d68 2
+a69 2
+			perror("slave : fail to create a shared memory\n");
+			create_log("slave : fail to create a shared memory\n");
+d116 2
+a117 1
+	while(( c = getopt(argc,argv,":i:l:")) != -1)
+d144 1
+a144 1
+
+@
+
+
+1.8
+log
+@*** empty log message ***
+@
+text
+@a47 3
+	//seed 
+	srand((unsigned) time(&t));
+
+d55 3
+d115 1
+a115 1
+	while(( c = getopt_long(argc,argv,":i:l:", optioons &option_index)) != -1)
+d177 1
+a177 1
+			for (j = 0; j<n; j++)
+@
+
+
+1.7
+log
+@*** empty log message ***
+@
+text
+@d9 2
+d27 1
+a27 1
+	int c, iflag, lflag;
+d46 1
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@d16 1
+d25 2
+a26 2
+	int c;
+	char *fname = "test.out";	//for -l switch, default is logfile.txt
+d37 1
+a37 1
+	int max_w;			//max writes
+d40 5
+d62 1
+a62 1
+	if ((shmid = shmget((key_t)1234, sizeof(char)*1024, 0600|IPC_CREAT)) == -1)
+d74 1
+a74 1
+	if ((turn_id = shmget((key_t)8888, sizeof(int)*20, 0600|IPC_CREAT)) == -1)
+d112 27
+a138 6
+	//getopt_long will be used to accept long switch
+	//short ones will be h,n,l
+	if (argc >1)
+		{
+			max_w = atoi(argv[1]);	
+		}
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d8 1
+d42 7
+d58 2
+a59 2
+			perror("master : fail to create a shared memory\n");
+			create_log("master : fail to create a shared memory\n");
+d65 1
+a65 1
+			create_log("master : created a shared memory");
+d70 2
+a71 2
+			perror("master : fail to create a shared memory for the peterson algorithm\n");
+			create_log("master : fail to create a shared memory for the peterson algorithm\n");
+d77 1
+a77 1
+			create_log("master : created a second shared memory");
+d84 2
+a85 2
+			perror("master : fail to attatch the shared memory\n");
+			create_log("master : fail to attatch the shared memory");
+d91 1
+a91 1
+			create_log("master : success to attatch the shared memory");
+d96 2
+a97 2
+			perror("master : fail to attatch the second shared memory\n");
+			create_log("master : fail to attatch the second shared memory");
+d103 1
+a103 1
+			create_log("master : success to attatch the second shared memory");
+d165 10
+a174 1
+	kill_shm();
+d182 2
+a183 2
+	printf("master : receive a signal to terminate");
+	create_log("master : receive a signal to terminate");
+d196 2
+a197 2
+			perror("master : fail to kill the shared memory\n");
+			create_log("master : fail to kill the shared memory");
+d201 2
+a202 2
+			printf("master : success to kill the shared memory\n");
+			create_log("master : success to kill the shared memory");
+d206 2
+a207 2
+			perror("master : fail to kill the second shared memory\n");
+			create_log("master : fail to kill the second shared memory");
+d211 2
+a212 2
+			printf("master : success to kill the second shared memory\n");
+			create_log("master : success to kill the second shared memory");
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d36 2
+a37 1
+	
+d113 1
+d147 2
+a148 2
+			shmptr++;
+			fprintf("File modified by process number %d at time %d:%d:%d with ..");
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@d36 4
+d144 1
+a144 1
+			sleep();
+d147 3
+a149 3
+			create_msg("slave : modified shared memory");
+			savemsg(fname);
+			sleep();
+d155 1
+a155 1
+
+@
+
+
+1.2
+log
+@working
+@
+text
+@d23 2
+a24 2
+	int c, hflag, nflag, lflag;
+	char *fname = "logfile.txt";	//for -l switch, default is logfile.txt
+d26 1
+a26 3
+	int option_index = 0;		//for getopt_long
+	int err_flag = 0;		//for getopt_long
+	char *strbuff = "42";		//handling default value for -n
+d35 1
+a35 2
+	int process_num = 19;		//number of process
+
+d37 1
+a37 1
+	char *shmptr;
+a92 13
+	opterr = 0;
+
+	//initialize flags
+	hflag = 0;
+	nflag = 0;
+	lflag = 0;
+
+	//declare long options
+	struct option options[] = {
+		{"help", 0, 0, 'h'},
+		{0,0,0,0}
+	};
+
+d95 1
+a95 43
+	if (argc >1){
+		while(( c = getopt_long(argc,argv, ":hn:l:", options,&option_index)) != -1)
+			switch (c)
+				{
+					//-h, --help for information about switch
+					case 'h':
+						hflag = 1;
+						break;
+					//-n to print different integer on the logfile
+					case 'n':
+						nflag = 1;
+						printf("%s\n",optarg);
+
+						//strtol to check int or not
+						value = strtol(optarg,&endptr, 10);
+						if(*endptr !='\0')
+							{
+								printf("test : you must type digits after -n, not %s",stderr);
+								return 1;
+							}
+						strbuff = (char *)malloc(strlen(optarg)+1);
+						strcpy(strbuff,optarg);
+						break;
+					//-l to change logfile name
+					case 'l':
+						lflag = 1;
+						if(strncmp(optarg,"-",1) == 0)
+							{
+								perror("test : you must type file name after -l switch.");
+								return 1;
+							}
+						fname = (char*) malloc(strlen(optarg)+1);
+						strcpy(fname,optarg);
+						break;
+					//errors in getopt
+					case '?':
+						err_flag = 1;
+						printf("Unknown option : -%c is found\n", optopt);
+						break;
+				}
+	}
+	//if errflag is on, just exit
+	if (err_flag ==1)
+d97 1
+a97 11
+			return 1;
+		}
+
+	//if iflag is on
+	//print simple definition and then term
+	if (hflag == 1)
+		{
+			printf("this program is designed for testing log library function\n");
+			printf("-h --help\n print options\n");
+			printf("-n [value]\n to print [value] on the logfile\n");
+			printf("-l [filename]\n change logfile name to [filename]\n");
+a98 16
+	else
+		{
+			create_log(strbuff);
+			//if no switch
+			//just test the loglib
+			//next 3 lines will test addmsg func
+			create_log("TEST : this is test msg");
+			create_log("TEST : this is test msg for queue");
+			create_log("TEST : this is test msg for clearfunc");
+	
+			savelog(fname);
+	
+			//next 2 lines will test getlog func
+			char *strings = getlog();
+			printf("%s", strings);
+
+a99 6
+			//next 3 will test clearlog func
+			clearlog();
+			strings = getlog();
+			printf("%s", strings);
+		}
+	
+d110 1
+a110 1
+	while(1)
+d138 10
+a147 1
+			//crit
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a34 1
+	int temp_pid;
+d190 1
+a190 1
+	//init pcb
+d192 1
+a192 1
+	for (k = 0; k<MAXP; k++)
+d194 2
+a195 3
+			p->choosing[k] = -1;
+			p->number[k] = -1;
+			p->pid[k] = -1;
+a196 4
+
+	//assign master process to 0th slot
+	p->pid[0] = pid;
+	i = 0;
+a197 29
+	//forking
+	for(k = 1; k<MAXP; k++)
+		{
+			temp_pid = fork();
+			if (temp_pid == -1)
+				{
+					perror("master : fail to fork a child process\n");
+					create_log("master : fail to fork a child process");
+					savelog(fname);
+					return 1;
+				}
+			else if(temp_pid == 0)
+				{
+					//place for child
+					//exec
+					if((execl("./slave", "slave")) == -1)
+						{
+							//getting error 
+							perror("slave : fail to exec the process image\n");
+							create_log(" slave: fail to exec the process image");
+							savelog(fname);
+							return 1;
+						}
+				}
+			else
+				{
+					p->pid[k] = temp_pid;
+				}
+		}
+@

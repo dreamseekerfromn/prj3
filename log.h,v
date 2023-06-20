@@ -1,0 +1,71 @@
+head	1.3;
+access;
+symbols;
+locks
+	o2-yi:1.3; strict;
+comment	@o@;
+
+
+1.3
+date	2016.09.14.15.32.09;	author o2-yi;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.02.10.15.44.13;	author o3-yi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.02.10.13.32.45;	author o3-yi;	state Exp;
+branches;
+next	;
+
+
+desc
+@initialize
+@
+
+
+1.3
+log
+@resubmiitng
+@
+text
+@//resubmitting old file
+#ifndef LOG_H
+#define LOG_H
+#include <time.h>
+
+typedef struct data_struct {
+	time_t time;
+	char *string;
+} data_t;
+
+int addmsg (data_t data);
+void clearlog (void);
+char *getlog (void);
+int savelog (char *filename);
+void create_log(char *);
+
+#endif /* LOG_H */
+@
+
+
+1.2
+log
+@add include guard
+@
+text
+@d1 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+d15 2
+@

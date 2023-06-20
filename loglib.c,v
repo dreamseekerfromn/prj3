@@ -1,0 +1,544 @@
+head	1.14;
+access;
+symbols;
+locks; strict;
+comment	@o@;
+
+
+1.14
+date	2016.09.17.14.11.48;	author o2-yi;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2016.09.14.15.29.12;	author o2-yi;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2016.02.11.00.39.46;	author o3-yi;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2016.02.10.23.53.32;	author o3-yi;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2016.02.10.19.31.09;	author o3-yi;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2016.02.10.18.01.56;	author o3-yi;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2016.02.10.17.55.20;	author o3-yi;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2016.02.10.15.52.35;	author o3-yi;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2016.02.10.15.42.29;	author o3-yi;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2016.02.10.13.32.20;	author o3-yi;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2016.02.10.12.18.07;	author o3-yi;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.02.10.08.03.15;	author o3-yi;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.02.10.04.52.39;	author o3-yi;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.02.10.04.49.32;	author o3-yi;	state Exp;
+branches;
+next	;
+
+
+desc
+@initialize
+@
+
+
+1.14
+log
+@*** empty log message ***
+@
+text
+@//resubmitting old files
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "log.h"
+
+typedef struct list_struct {
+	data_t item;
+	struct list_struct *next;
+} log_t;
+
+static log_t *headptr = NULL;
+static log_t *tailptr = NULL;
+
+//90% same as the program 2.7 in pg44-45
+//nothing special, just add a line for perror
+int 
+addmsg (data_t data) 
+{
+	log_t *newnode;
+	int nodesize;
+	
+	nodesize = sizeof(log_t) + strlen(data.string) + 1;
+	if ((newnode = (log_t *)(malloc(nodesize))) == NULL)
+		{
+			perror("loglib.c : fail to malloc a newnode\n");
+			return -1;
+		}
+	
+	newnode->item.time = data.time;
+	newnode->item.string = (char *)newnode + sizeof(log_t);
+	strcpy(newnode->item.string, data.string);
+	newnode->next = NULL;
+	if ( headptr == NULL)
+		headptr = newnode;
+	else 
+		tailptr->next = newnode;
+	tailptr = newnode;
+	return 0;
+}
+
+void 
+clearlog (void) 
+{
+	//decl variable
+	log_t *newnode = headptr;
+
+	//free the mem space
+	while (newnode != NULL)
+		{
+			//if(headptr->next != NULL)
+				{
+					newnode = headptr->next;
+					free(headptr);
+					headptr = newnode;
+				}
+			//else
+				//free(headptr);
+		}
+}
+
+char 
+*getlog (void)
+{
+	//declare variables
+	//length for the sum of strings, will b used for malloc
+	//str to store strings for returning 
+	log_t *newnode;
+	unsigned int length = 0;
+	char *str;
+	struct tm *timeinfo;	//for timestamp
+
+	//assign headptr to newnode
+	newnode = headptr;
+
+	//check the total length size of the string (sum of)
+	//it will be used for malloc the str variable
+	while (newnode != NULL)
+		{
+			timeinfo = localtime(&newnode->item.time);
+			length += strlen(asctime(timeinfo)) + 1;
+			length += strlen(newnode->item.string) + 1;
+			newnode = newnode->next;
+		}
+
+	//mem allocation
+	str = (char*)malloc(length + 1);
+	strcpy(str, "\0");
+	//reset the position
+	newnode = headptr;
+
+	//now strcat string to the str var for returning
+	while (newnode != NULL)
+		{
+			timeinfo = localtime(&newnode->item.time);
+			strcat(str, asctime(timeinfo));
+			strcat(str, newnode->item.string);
+			strcat(str, "\n");		//add newline
+			newnode = newnode->next;
+		}
+
+	//if str is NULL, it means "something is wrong!"
+	//return NULL
+	if (str == NULL)
+		{
+			perror("loglibl.c : fail to get log msg\n");
+			return NULL;
+		}
+	return str;
+}
+
+int 
+savelog (char *filename) 
+{
+	//variable declaration
+	FILE *fp;
+	log_t *newnode;
+	struct tm * timeinfo;
+
+	//file open
+	//if opening is failed, return -1
+	if((fp = fopen(filename, "a")) == NULL)
+		{
+			perror("loglib.c : cannot open the log file\n");
+			return -1;
+		}
+
+	//point to head
+	newnode = headptr;
+
+	//append string to the file
+	while(newnode != NULL)
+		{
+			timeinfo = localtime (&newnode->item.time);	//put time stamp
+			fputs(asctime(timeinfo),fp);			//as human readable version
+			fputs("\t",fp);					
+			fputs(newnode->item.string,fp);			//put string
+			fputs("\n",fp);
+			newnode = newnode->next;					
+		}
+	
+	//close file
+	if(fclose(fp) != 0)
+		{
+			perror("loglib.c : fail to close the log file\n ");
+			return -1;
+		}
+	return 0;
+}
+
+//create log function
+//this one is not in the temp
+//it will receive string then put it into the queue
+void 
+create_log(char *msg)
+{
+	//decl variable
+	data_t data;
+
+	//put time into data 
+	time (&data.time);
+
+	//mem alloc
+	data.string = (char*)malloc(strlen(msg) +1);
+
+	//string copy 
+	strcpy (data.string, msg);
+
+	//now pass it into addmsg function for rest
+	addmsg(data);
+
+	//free memory
+	free(data.string);
+}
+@
+
+
+1.13
+log
+@resubmitting old files
+@
+text
+@d164 1
+a164 1
+	data.string = malloc(strlen(msg) +1);
+@
+
+
+1.12
+log
+@fixing errata and etc
+@
+text
+@d1 1
+@
+
+
+1.11
+log
+@fix double free memory error thingy
+add newline for getlog
+add null for str in getlog to prevent garbage value
+@
+text
+@d65 1
+a65 1
+	//length for the sum of strings
+d70 1
+a70 1
+	struct tm *timeinfo;
+d87 1
+a87 1
+	
+a107 1
+	strcat(str, "\0");	//add null terminal for avoiding garbage
+@
+
+
+1.10
+log
+@edited clearlog but not test
+@
+text
+@d50 1
+a50 1
+			if(headptr->next != NULL)
+d56 2
+a57 2
+			else
+				free(headptr);
+d97 1
+d108 1
+a108 1
+
+@
+
+
+1.9
+log
+@tried to follow GNU coding standard
+@
+text
+@d50 8
+a57 3
+			headptr = headptr->next;
+			free(newnode);
+			newnode = headptr;
+@
+
+
+1.8
+log
+@fix getlog()
+@
+text
+@d16 3
+a18 1
+int addmsg (data_t data) {
+d23 5
+a27 4
+	if ((newnode = (log_t *)(malloc(nodesize))) == NULL){
+		perror("loglib.c : fail to malloc a newnode\n");
+		return -1;
+	}
+d41 3
+a43 1
+void clearlog (void) {
+d48 6
+a53 5
+	while (newnode != NULL){
+		headptr = headptr->next;
+		free(newnode);
+		newnode = headptr;
+	}
+d56 3
+a58 1
+char *getlog (void) {
+d72 7
+a78 6
+	while (newnode != NULL){
+		timeinfo = localtime(&newnode->item.time);
+		length += strlen(asctime(timeinfo)) + 1;
+		length += strlen(newnode->item.string) + 1;
+		newnode = newnode->next;
+	}
+d87 7
+a93 6
+	while (newnode != NULL){
+		timeinfo = localtime(&newnode->item.time);
+		strcat(str, asctime(timeinfo));
+		strcat(str, newnode->item.string);
+		newnode = newnode->next;
+	}
+d97 5
+a101 4
+	if (str == NULL){
+		perror("loglibl.c : fail to get log msg\n");
+		return NULL;
+	}
+d106 3
+a108 1
+int savelog (char *filename) {
+d116 5
+a120 4
+	if((fp = fopen(filename, "a")) == NULL){
+		perror("loglib.c : cannot open the log file\n");
+		return -1;
+	}
+d126 9
+a134 8
+	while(newnode != NULL){
+		timeinfo = localtime (&newnode->item.time);	//put time stamp
+		fputs(asctime(timeinfo),fp);			//as human readable version
+		fputs("\t",fp);					
+		fputs(newnode->item.string,fp);			//put string
+		fputs("\n",fp);
+		newnode = newnode->next;					
+	}
+d137 5
+a141 4
+	if(fclose(fp) != 0){
+		perror("loglib.c : fail to close the log file\n ");
+		return -1;
+	}
+d148 3
+a150 1
+void create_log(char *msg){
+@
+
+
+1.7
+log
+@fix errata for the infinite loop
+@
+text
+@d55 1
+a55 1
+	unsigned int length;
+d57 1
+d59 1
+a59 1
+	//point to headptr for collecting data
+d65 2
+d74 3
+d79 2
+a91 1
+	
+@
+
+
+1.6
+log
+@fix errata
+@
+text
+@d110 2
+a111 1
+		fputs("\n",fp);					
+@
+
+
+1.5
+log
+@add comments
+@
+text
+@d2 1
+d64 1
+a64 1
+		length += strlen(newnode->item.string) + 1);
+d141 1
+a141 1
+	free(data);
+@
+
+
+1.4
+log
+@done for all functions but not tested
+no comment added
+@
+text
+@d13 2
+d38 1
+d41 1
+d50 3
+d57 1
+d60 2
+d67 1
+d70 1
+d76 2
+d83 1
+d88 1
+d93 2
+d100 1
+d102 8
+a109 7
+	while(newnode){
+		//not complete
+		timeinfo = localtime (&newnode->item.time);
+		fputs(asctime(timeinfo),fp);
+		fputs("\t",fp);
+		fputs(newnode->item.string,fp);
+		fputs("\n",fp);
+d112 1
+a112 1
+	
+d120 3
+d124 1
+d127 1
+d129 2
+d132 2
+d135 2
+d138 2
+@
+
+
+1.3
+log
+@done for savelog and create_log and etc
+doesn put the comment
+still working.
+@
+text
+@d46 24
+a69 1
+	return NULL;
+@
+
+
+1.2
+log
+@done for adddata function
+some variable name is different but basically this function is identically same as the program 2.7 in pg 44 of the textbook
+@
+text
+@d19 1
+a19 1
+		printf("loglib.c : fail to malloc a newnode\n");
+d36 1
+d38 5
+d50 24
+d75 10
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d18 2
+a19 1
+	if ((newnode = (log_t *)(malloc(nodesize))) == NULL)
+d21 1
+@

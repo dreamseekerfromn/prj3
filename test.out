@@ -1,0 +1,1446 @@
+Mon Oct 24 22:19:14 2016
+	oss : created a shared memory
+Mon Oct 24 22:19:14 2016
+	oss : created a second shared memory
+Mon Oct 24 22:19:14 2016
+	oss : success to attatch the shared memory
+Mon Oct 24 22:19:14 2016
+	oss : success to attatch the second shared memory
+Mon Oct 24 22:19:14 2016
+	oss : created semaphore
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process1 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 2 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 3 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process2 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process3 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 2 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 3 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 2 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1 (pid : 12078) : 
+ job length = 86091 	 start time = 0:81409
+Mon Oct 24 22:19:14 2016
+	process 3 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 2 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 3 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 2 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 1 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 3 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 1 (pid:12078) is going to terminate because it reached oss clock = 0:94331
+		 took 0 sec, 112574 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 2 (pid : 12079) : 
+ job length = 58222 	 start time = 0:94652
+Mon Oct 24 22:19:14 2016
+	process 3 (pid : 12080) : 
+ job length = 5475 	 start time = 0:94652
+Mon Oct 24 22:19:14 2016
+	process 1 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 2 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 3 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 1542875 nano second
+ process number 1 (pid:12078) is going to terminate because it reached oss clock = 0:94331
+		 took 0 sec, 112574 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 2 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 3 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process number 3 (pid:12080) is going to terminate because it reached oss clock = 0:96220
+		 took 0 sec, 107522 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 1656099 nano second
+ process number 2 (pid:12079) is going to terminate because it reached oss clock = 0:96516
+		 took 0 sec, 116496 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process number 2 (pid:12079) is going to terminate because it reached oss clock = 0:96516
+		 took 0 sec, 116496 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 1 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 3 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 2 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 3 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 2 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 3 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 2 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 3 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 2 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 6 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process6 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 6 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 5 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 8 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process5 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process8 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 6 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 5 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 5 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 6 (pid : 12083) : 
+ job length = 22239 	 start time = 0:234536
+Mon Oct 24 22:19:14 2016
+	process 5 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 8 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 5 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 5 (pid : 12082) : 
+ job length = 54734 	 start time = 0:244609
+Mon Oct 24 22:19:14 2016
+	process number 6 (pid:12083) is going to terminate because it reached oss clock = 0:246798
+		 took 0 sec, 106090 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 8 (pid : 12085) : 
+ job length = 14998 	 start time = 0:245321
+Mon Oct 24 22:19:14 2016
+	process 5 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 3433945 nano second
+ process number 6 (pid:12083) is going to terminate because it reached oss clock = 0:246798
+		 took 0 sec, 106090 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 5 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process number 5 (pid:12082) is going to terminate because it reached oss clock = 0:249511
+		 took 0 sec, 104597 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 3516754 nano second
+ process number 5 (pid:12082) is going to terminate because it reached oss clock = 0:249511
+		 took 0 sec, 104597 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 6 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 5 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process number 8 (pid:12085) is going to terminate because it reached oss clock = 0:249799
+		 took 0 sec, 129183 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 6 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 5 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 5 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 5 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 8 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 8 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 7 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process7 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 7 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 7 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 7 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 7 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 7 (pid : 12084) : 
+ job length = 4867 	 start time = 0:337767
+Mon Oct 24 22:19:14 2016
+	process 7 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 7 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 7 (pid:12084) is going to terminate because it reached oss clock = 0:351447
+		 took 0 sec, 135975 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 7 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 4906383 nano second
+ process number 7 (pid:12084) is going to terminate because it reached oss clock = 0:351447
+		 took 0 sec, 135975 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 7 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 7 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 7 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 9 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process9 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 9 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 9 (pid : 12086) : 
+ job length = 46450 	 start time = 0:377655
+Mon Oct 24 22:19:14 2016
+	process 9 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 11 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process number 9 (pid:12086) is going to terminate because it reached oss clock = 0:389703
+		 took 0 sec, 104765 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 5422858 nano second
+ process number 9 (pid:12086) is going to terminate because it reached oss clock = 0:389703
+		 took 0 sec, 104765 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process11 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 11 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 11 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 11 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 9 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 11 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 9 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 11 (pid : 12088) : 
+ job length = 27681 	 start time = 0:403961
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 11 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 11 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 11 (pid:12088) is going to terminate because it reached oss clock = 0:408362
+		 took 0 sec, 119006 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 11 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 5790753 nano second
+ process number 11 (pid:12088) is going to terminate because it reached oss clock = 0:408362
+		 took 0 sec, 119006 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 11 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 11 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 11 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 10 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process10 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 10 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 10 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 10 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 10 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 10 (pid : 12087) : 
+ job length = 87614 	 start time = 0:470308
+Mon Oct 24 22:19:14 2016
+	process 10 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 10 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 10 (pid:12087) is going to terminate because it reached oss clock = 0:482008
+		 took 0 sec, 101067 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 6647413 nano second
+ process number 10 (pid:12087) is going to terminate because it reached oss clock = 0:482008
+		 took 0 sec, 101067 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 10 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 10 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 10 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 10 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 4 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process4 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 4 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 4 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 4 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 4 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 12 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 4 (pid : 12081) : 
+ job length = 87957 	 start time = 0:505953
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process12 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 4 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 4 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 12 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process number 4 (pid:12081) is going to terminate because it reached oss clock = 0:519538
+		 took 0 sec, 117444 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 12 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 4 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 7175052 nano second
+ process number 4 (pid:12081) is going to terminate because it reached oss clock = 0:519538
+		 took 0 sec, 117444 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 12 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 4 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 12 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 4 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 12 (pid : 12089) : 
+ job length = 62311 	 start time = 0:525295
+Mon Oct 24 22:19:14 2016
+	process 4 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 12 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 12 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 12 (pid:12089) is going to terminate because it reached oss clock = 0:525898
+		 took 0 sec, 104887 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 12 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 12 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 7430364 nano second
+ process number 12 (pid:12089) is going to terminate because it reached oss clock = 0:525898
+		 took 0 sec, 104887 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 12 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 12 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 14 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process14 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 14 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 14 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 14 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 14 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 14 (pid : 12091) : 
+ job length = 88784 	 start time = 0:583394
+Mon Oct 24 22:19:14 2016
+	process 14 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 14 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 14 (pid:12091) is going to terminate because it reached oss clock = 0:595490
+		 took 0 sec, 105375 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 14 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 8312045 nano second
+ process number 14 (pid:12091) is going to terminate because it reached oss clock = 0:595490
+		 took 0 sec, 105375 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 14 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 14 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 14 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 13 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process13 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 13 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 13 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 13 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 13 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 13 (pid : 12090) : 
+ job length = 10731 	 start time = 0:623608
+Mon Oct 24 22:19:14 2016
+	process 13 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 15 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 13 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process15 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process number 13 (pid:12090) is going to terminate because it reached oss clock = 0:637478
+		 took 0 sec, 136628 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 15 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 13 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 8895239 nano second
+ process number 13 (pid:12090) is going to terminate because it reached oss clock = 0:637478
+		 took 0 sec, 136628 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 13 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 15 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 15 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 13 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 15 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 13 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 15 (pid : 12092) : 
+ job length = 8850 	 start time = 0:645838
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 15 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 15 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 15 (pid:12092) is going to terminate because it reached oss clock = 0:648987
+		 took 0 sec, 107827 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 15 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 9213715 nano second
+ process number 15 (pid:12092) is going to terminate because it reached oss clock = 0:648987
+		 took 0 sec, 107827 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 15 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 15 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 15 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 16 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process16 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 16 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 16 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 16 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 16 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 16 (pid : 12093) : 
+ job length = 91163 	 start time = 0:689582
+Mon Oct 24 22:19:14 2016
+	process 16 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 16 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 16 (pid:12093) is going to terminate because it reached oss clock = 0:700627
+		 took 0 sec, 112767 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 9874832 nano second
+ process number 16 (pid:12093) is going to terminate because it reached oss clock = 0:700627
+		 took 0 sec, 112767 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 16 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 16 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 16 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 16 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 17 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process17 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 17 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 17 (pid : 12094) : 
+ job length = 30294 	 start time = 0:748832
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 17 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 18 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process number 17 (pid:12094) is going to terminate because it reached oss clock = 0:760876
+		 took 0 sec, 104407 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process18 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 10618135 nano second
+ process number 17 (pid:12094) is going to terminate because it reached oss clock = 0:760876
+		 took 0 sec, 104407 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 18 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 18 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 18 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 17 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 18 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 17 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 18 (pid : 12095) : 
+ job length = 71336 	 start time = 0:769254
+Mon Oct 24 22:19:14 2016
+	process 18 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 18 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 18 (pid:12095) is going to terminate because it reached oss clock = 0:773825
+		 took 0 sec, 148765 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 10967639 nano second
+ process number 18 (pid:12095) is going to terminate because it reached oss clock = 0:773825
+		 took 0 sec, 148765 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 18 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 18 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 18 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 18 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 19 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process19 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 19 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 19 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 19 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 19 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 19 (pid : 12096) : 
+ job length = 49992 	 start time = 0:798362
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 19 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 19 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 19 (pid:12096) is going to terminate because it reached oss clock = 0:809782
+		 took 0 sec, 99065 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 11469735 nano second
+ process number 19 (pid:12096) is going to terminate because it reached oss clock = 0:809782
+		 took 0 sec, 99065 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 19 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 19 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 19 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 19 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 20 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process20 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 20 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 20 (pid : 12097) : 
+ job length = 39295 	 start time = 0:869736
+Mon Oct 24 22:19:14 2016
+	process 20 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 20 (pid:12097) is going to terminate because it reached oss clock = 0:881439
+		 took 0 sec, 102959 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 12296311 nano second
+ process number 20 (pid:12097) is going to terminate because it reached oss clock = 0:881439
+		 took 0 sec, 102959 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 21 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process21 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 20 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 20 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 21 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 21 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 21 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 22 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 21 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process22 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 22 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 21 (pid : 12098) : 
+ job length = 26730 	 start time = 0:918884
+Mon Oct 24 22:19:14 2016
+	process 22 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 21 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 22 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 22 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 21 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 22 (pid : 12099) : 
+ job length = 81401 	 start time = 0:936306
+Mon Oct 24 22:19:14 2016
+	process number 21 (pid:12098) is going to terminate because it reached oss clock = 0:938241
+		 took 0 sec, 183245 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 22 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 13004301 nano second
+ process number 21 (pid:12098) is going to terminate because it reached oss clock = 0:938241
+		 took 0 sec, 183245 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 21 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 22 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 21 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 22 (pid:12099) is going to terminate because it reached oss clock = 0:940235
+		 took 0 sec, 104362 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 13087594 nano second
+ process number 22 (pid:12099) is going to terminate because it reached oss clock = 0:940235
+		 took 0 sec, 104362 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 22 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 21 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 22 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 21 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 22 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 22 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 23 : got a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process23 : get a second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 23 : success to attatch the shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 23 : success to attatch the second shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 23 : got the semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 23 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process 23 (pid : 12100) : 
+ job length = 75873 	 start time = 0:993192
+Mon Oct 24 22:19:14 2016
+	process 23 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	process 23 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	process number 23 (pid:12100) is going to terminate because it reached oss clock = 0:1008211
+		 took 0 sec, 129451 nano sec in real time 
+
+
+Mon Oct 24 22:19:14 2016
+	process 23 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : at my time 0 second, 14019905 nano second
+ process number 23 (pid:12100) is going to terminate because it reached oss clock = 0:1008211
+		 took 0 sec, 129451 nano sec in real time 
+
+
+
+Mon Oct 24 22:19:14 2016
+	process 23 : success to lock
+
+Mon Oct 24 22:19:14 2016
+	
+Mon Oct 24 22:19:14 2016
+	process 23 : success to unlock semaphore
+
+Mon Oct 24 22:19:14 2016
+	oss : forking a child process
+Mon Oct 24 22:19:14 2016
+	process 23 : shmdt success
+
+Mon Oct 24 22:19:14 2016
+	oss : fail to fork a child process
+Mon Oct 24 22:19:14 2016
+	oss : move to terminating sequence
+
+Mon Oct 24 22:19:14 2016
+	oss : success to kill the shared memory
+Mon Oct 24 22:19:14 2016
+	oss : success to kill the second shared memory
+Mon Oct 24 22:19:14 2016
+	oss : success to kill the semaphore
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 25 : fail to get a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 26 : fail to get a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 24 : fail to get a shared memory
+
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 1953719668 : exec success, now start the process
+Mon Oct 24 22:19:14 2016
+	process 27 : fail to get a shared memory
+

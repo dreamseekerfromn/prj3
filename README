@@ -1,0 +1,35 @@
+Name: Sung Yi
+SSOID: sjy7rf
+project3
+Oct 5th 2016
+
+NAME
+loglib.c - a library for log 
+log.h - a header for the library
+oss - a executable file that is increment the clock. It will spawn children too
+slave - a executalbe file that is created for testing IPCS. It will read the clock 
+pcb.h - contain structure for the bakery algorithm
+
+DESCRIPTION
+simple os simulator to read clock.
+
+-h
+will show the purpose of the file "test"
+
+-s [integer]
+set maximum number of processes to [integer]
+
+-i [integer]
+set maximum writing for slave to [integer]
+
+-l [filename]
+the output will be [filename]
+
+-t [integer]
+set timer for [integer] seconds to terminate master process
+
+Author
+Sung Yi
+
+Additional Note
+1. have problem to spawn child processes. cannot exceed more than 25. Somehow the system says the resource is temporarily unavailable.
